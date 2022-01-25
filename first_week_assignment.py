@@ -6,14 +6,14 @@ print(list)
 sample_list = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
 print(sample_list [1:4])
 
-color_list = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+# color_list = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
 
-color = input("Enter your color: ")
+# color = input("Enter your color: ")
 
-color_list.append(color)
-print(color_list)
+# color_list.append(color)
+# print(color_list)
 
 new_list = ['this', "brown", 55, "oxen", True, 0.85]
 
-new_list [4] = "false"
+new_list [4] = False
 print(new_list)

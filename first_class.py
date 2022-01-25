@@ -15,7 +15,7 @@
 # print(f"The sum of %s and %s is %d" % (first_num, second_num, added))
 
 # print ("This is ayo's book")
-# print('This is ayo\'s book')
+print('This is ayo\'s book')
 
 # print("Dear, Buhari.\nPlease don't run for president again.\n\tYours in the country.\n\tAstroverse Team.")
 
@@ -34,11 +34,11 @@
 # a = my_sentence.split(",")
 # print(a)
 
-# num = ['0','4','3','2']
+num = ['0','4','3','2']
 
-# otp = "".join(num)
+otp = "".join(num)
 
-# print(otp)
+print(otp)
 
 # s1 = "Ault"
 # s2 = "Kelly"
