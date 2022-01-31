@@ -1,45 +1,86 @@
-# my_list = ["The", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog."]
+#......Dictionary.......#
+# my_dict = {"key":"This is the value", "key2":"This is another key"}
 
-# list = " ".join(my_list)
-# print(list)
+# # # my_Dict = dict()
+# # my_dict ={"key":"This is the new value"}#To change an existing value
 
-# sample_list = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
-# print(sample_list [1:4])
+# a = {"key7":"This is the value", "key5":"This is another key"}
 
-# # color_list = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+# my_dict.update(a)#To add to the multiples keys to a dictionary
 
-# # color = input("Enter your color: ")
+# # print(my_dict.keys())#To know the number of keys in your dictionary
+# # print(my_dict.values())#To know the number of values in your dictionary
+# # print(my_dict.items())
 
-# # color_list.append(color)
-# # print(color_list)
+# b = [('key', 'This is the new value'), ('key7', 'This is the value'), ('key5', 'This is another key')]
 
-# new_list = ['this', "brown", 55, "oxen", True, 0.85]
+# # print(dict(b))
 
-# new_list [4] = False
-# print(new_list)
+# # popped = my_dict.pop("key7")
+# # print(popped)
+# # print(my_dict)
+
+# print(my_dict.get("xyz", "Not found"))
 
 
+# data = {"name":"chucks","location":"Aba","Job":"Senior Frontend","Salary":"$50,000"}
+# data["city"] = data.pop("location")
+# print(data)
+
+# .......Conditionals........#
+# if "ada" == "john":
+#     print("Correct")
+# else:
+#     print("Incorrect")
+
+# user_data = {"thimzy@gmail.com":"Oloba Thimzy"}
+
+# user_email = input("Enter your email:\n>").lower()
+
+# if user_email.isspace() or user_email == "":
+#     print("No entry")
+# else:
+#     if user_email in user_data.keys():
+#         print("Account already exists")
+#     else:
+#         choice = input("Do you want to subscribe?(Y/y or N/n)\n>").lower()
+
+#         if choice == 'y':
+#             name = input("Enter your full name:\n>")
+#             user_data[user_email] = name
+#             print("successfully subscribed.")
+
+#         elif choice == 'n':
+#             print("Goodbye!")
+#         else:
+#             print("Invalid input")
+# print(user_data)
+
+
+#.......bank app v1....#
 import random
 
 
 data = {
-    "3947758475" : {
-        "name":"Desmond",
+    "3947758457" : {
+        "name":"Thimzy",
         "dob": "09-09-09",
-        "bvn": "123456789",
+        "bvn": "12345678912",
         "pin": "1234",
-        "bal" : 120900
+        "bal": 120000
     },
     "3927758475" : {
-        "name":"Ife",
+        "name":"Samklef",
         "dob": "09-09-79",
-        "bvn": "123416789",
+        "bvn": "12341678912",
         "pin": "1214",
-        "bal" : 12000
+        "bal" : 15000
     },
 }
+
+
 print("Welcome to the AstroBank App")
-print("Enter s to signup or l to login:")
+print("Enter s to signup or l to login")
 choice = input(">").lower()
 
 if choice == 'l':
@@ -98,7 +139,7 @@ elif choice == 's':
     user_pin = input("Enter your 4 Digit PIN :\n>").lower()
     # user_pin = int(user_pin)
 
-    if type(user_name) == type("String") and type(user_dob) == type("String") and type(user_bvn) == type("String") and len(user_bvn) == 10 and type(user_pin) == type("String") and len(user_pin) == 4:
+    if type(user_name) == type("String") and type(user_dob) == type("String") and type(user_bvn) == type("String") and len(user_bvn) == 11 and type(user_pin) == type("String") and len(user_pin) == 4:
 
        acct_data = {}
        acct_data["name"]= user_name
@@ -158,6 +199,14 @@ elif choice == 's':
 
 else:
         print("Invalid data") 
+
+
+
+
+
+
+
+
 
 
 

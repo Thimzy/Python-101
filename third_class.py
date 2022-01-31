@@ -3,7 +3,7 @@
 
 # color_list = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
 
-# # print(color_list.index('Red'))
+# print(color_list.index('Red'))
 
 # #......How to add a new list......#
 # print("Welcome to the astroverse!")
@@ -78,12 +78,11 @@
 
 # print(len(total))
 
-eng = {1,2,3,4,5,6,7,8,9}
-french = {10,1,2,3,11,21,55,6,8}
-c = eng.symmetric_difference(french)
-ans = len(c)
-print(ans)
-
+# eng = {1,2,3,4,5,6,7,8,9}
+# french = {10,1,2,3,11,21,55,6,8}
+# c = eng.symmetric_difference(french)
+# ans = len(c)
+# print(ans)
 
 
 
@@ -92,3 +91,5 @@ print(ans)
 # c = eng.union(french)
 # ans = len(c)
 # print(ans)
+
+# print(2%6)

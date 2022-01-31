@@ -1,45 +1,27 @@
-# my_list = ["The", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog."]
-
-# list = " ".join(my_list)
-# print(list)
-
-# sample_list = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
-# print(sample_list [1:4])
-
-# # color_list = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
-
-# # color = input("Enter your color: ")
-
-# # color_list.append(color)
-# # print(color_list)
-
-# new_list = ['this', "brown", 55, "oxen", True, 0.85]
-
-# new_list [4] = False
-# print(new_list)
-
-
+#.......bank app v1....#
 import random
 
 
 data = {
-    "3947758475" : {
-        "name":"Desmond",
+    "3947758457" : {
+        "name":"Thimzy",
         "dob": "09-09-09",
-        "bvn": "123456789",
+        "bvn": "12345678912",
         "pin": "1234",
-        "bal" : 120900
+        "bal": 120000
     },
     "3927758475" : {
-        "name":"Ife",
+        "name":"Samklef",
         "dob": "09-09-79",
-        "bvn": "123416789",
+        "bvn": "12341678932",
         "pin": "1214",
-        "bal" : 12000
+        "bal" : 15000
     },
 }
+
+
 print("Welcome to the AstroBank App")
-print("Enter s to signup or l to login:")
+print("Enter s to signup or l to login")
 choice = input(">").lower()
 
 if choice == 'l':
@@ -158,6 +140,3 @@ elif choice == 's':
 
 else:
         print("Invalid data") 
-
-
-
