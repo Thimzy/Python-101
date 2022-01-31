@@ -48,8 +48,7 @@ if choice == 'l':
                 user_1["bal"] += dep_amount_1
                 print(user_1)
             else:
-                print("Invalid Login") 
-                print("4 more tries")
+                print("Pin not correct") 
 
         elif choice_2 == "w":  
               acc_num_4 = input("Enter your account num\n>")
@@ -64,13 +63,11 @@ if choice == 'l':
                 user_4["bal"] -= withdrawal_amount
                 print(user_4)
               else:
-                print("Invalid Login") 
-                print("4 more tries")
+                print("Pin not correct") 
         if choice_2 == "q":  
            print("Goodbye from Astroverse Bank")
     else:
         print("Invalid Login") 
-        print("Invalid Login")
 # Sign-up  Process 
 elif choice == 's':
     user_name = input("Enter your full name:\n>").lower()
@@ -128,7 +125,7 @@ elif choice == 's':
                     user_3["bal"] -= withdrawal_amount
                     print(user_3)
                   else:
-                        print("Invalid Login") 
+                        print("Pin not correct") 
        elif choice_2 == "q": 
          print("Goodbye from Astroverse Bank")  
 
