@@ -71,7 +71,7 @@ if choice == 'l':
     else:
         print("Invalid Login") 
         print("Invalid Login")
-# Sign-up or Registration Process Algorithm -#1
+# Sign-up  Process 
 elif choice == 's':
     user_name = input("Enter your full name:\n>").lower()
     user_dob = input("Enter your dob mm-dd-yyyy:\n>").lower()
@@ -80,7 +80,7 @@ elif choice == 's':
     user_pin = input("Enter your 4 Digit PIN :\n>").lower()
     # user_pin = int(user_pin)
 
-    if type(user_name) == type("String") and type(user_dob) == type("String") and type(user_bvn) == type("String") and len(user_bvn) == 10 and type(user_pin) == type("String") and len(user_pin) == 4:
+    if type(user_name) == type("String") and type(user_dob) == type("String") and type(user_bvn) == type("String") and len(user_bvn) == 11 and type(user_pin) == type("String") and len(user_pin) == 4:
 
        acct_data = {}
        acct_data["name"]= user_name
@@ -129,7 +129,6 @@ elif choice == 's':
                     print(user_3)
                   else:
                         print("Invalid Login") 
-                        print("4 more tries")
        elif choice_2 == "q": 
          print("Goodbye from Astroverse Bank")  
 
