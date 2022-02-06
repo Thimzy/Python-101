@@ -71,8 +71,8 @@ import time
 
 
 
-user_input = input("Enter your numbers seperated by comma\n>")
-num = [int(i) for i in user_input.split(",")] # Using list comprehension
+# user_input = input("Enter your numbers seperated by comma\n>")
+# num = [int(i) for i in user_input.split(",")] # Using list comprehension
 
 # alternatively, we can use mapping to map a finction to list
 
@@ -82,43 +82,43 @@ num = [int(i) for i in user_input.split(",")] # Using list comprehension
 
 
 ## Calculating the mean #
-mean = sum(num)/len(num)
+# mean = sum(num)/len(num)
 
 
 ## Calcuting the median #
-num.sort()
+# num.sort()
 
-midpoint = len(num)//2
-if len(num)%2 == 0:
-    median = (num[midpoint] + num[midpoint-1])/2
-else:
-    median = num[midpoint]
+# midpoint = len(num)//2
+# if len(num)%2 == 0:
+#     median = (num[midpoint] + num[midpoint-1])/2
+# else:
+#     median = num[midpoint]
 
 
 
 # Calculating the mode
-freq = {}
-for i in num:
-    freq[i] = freq.get(i,0) + 1
+# freq = {}
+# for i in num:
+#     freq[i] = freq.get(i,0) + 1
 
-mode = max(freq, key=lambda x:freq[x])
+# mode = max(freq, key=lambda x:freq[x])
 
 
-## Standard deviation
+# ## Standard deviation
 
-standard_deviation = (sum([(x-mean)**2 for x in num])/len(num))**0.5
+# standard_deviation = (sum([(x-mean)**2 for x in num])/len(num))**0.5
 
-##Variance
-print("Calculating........\n>")
-time.sleep(3)
-print("View results below:\n>")
+# ##Variance
+# print("Calculating........\n>")
+# time.sleep(3)
+# print("View results below:\n>")
 
-variance = standard_deviation**2
-print(f"The mean is {round(mean, 2)}")
-print(f"The median is {median}")
-print(f"The mode is {mode}")
-print(f"The standard_deviation is {round(standard_deviation,2)}")
-print(f"The variance is {round(variance,2)}")
+# variance = standard_deviation**2
+# print(f"The mean is {round(mean, 2)}")
+# print(f"The median is {median}")
+# print(f"The mode is {mode}")
+# print(f"The standard_deviation is {round(standard_deviation,2)}")
+# print(f"The variance is {round(variance,2)}")
 
 # print(dict(zip([1,2,3,4,5] [1,4,9,16,25])))
 

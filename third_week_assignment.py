@@ -33,7 +33,7 @@ if choice == 'l':
     if user and user['pin'] == pin:
         print(user)
         print(f"Welcome {user['name']}.\nYour account balance is ${user['bal']}")
-#Withdraw and deposit
+#Withdraw, deposit and transfer
 
         print("""\nWhat would you like to do?
               Press 1 to withdraw
@@ -58,8 +58,7 @@ if choice == 'l':
             user['bal']+= amount
             print ("Succesful")
             print(f"Balance is {user['bal']}")
-        else:
-            print("Goodbye")
+        
 
         if user_input == '3':
             trans_account = input("Enter the account you wish to transfer to\n>")
@@ -68,12 +67,15 @@ if choice == 'l':
                 print("You cant transfer to your own account")
             else:
                 amount = int(input("How much do you want to transfer\n>"))
+                pin = input("Enter your pin\n>")
                 if amount <= user['bal']:
                     user["bal"] -= amount 
                     trans_account["bal"] +=amount
                     print('......Processing Transaction......')
                     time.sleep(3)
                     print("Transaction successful")
+        else:
+            print("Goodbye")
     else: 
         print("Invalid Login")
 
@@ -100,65 +102,3 @@ else:
     print("Invalid input")
 
 print(data)
-
-
-# # num = [1,2,3,4,5,6,7,8,9,0]
-# # print("Guess World")
-# # random.shuffle(num)
-# # choice = 3
-
-# # trial = 3
-# # score = 0
-
-# # # for i in range(10000000000000000000000000):
-# # #     if trial == 0:
-# # #         print("Game Over!")
-# # #         print(f"Your score is {score}")
-# # #         break
-# # while trial != 0:
-# #     choice = random.choice(num)
-# #     print(choice)
-# #     play = int(input('Enter your number\n>'))
-# #     if play == choice:
-# #         trial +=1
-# #         score +=3
-# #         print("Correct!")
-# #         print("You have been given an extra trial")
-# #         print("Yayyyy! 😎😄")
-# #     else:
-# #         trial -=1
-# #         print("Incorrect!")
-# #         print(f"You have {trial} trial(s) left")
-# #         print("Game Over")
-# #         print(f"Your score is {score}")
-#     # print(choice)
-# while True:
-#     user_choice = input("Enter a choice (rock, paper, scissors):\n> ")
-
-#     game = ["rock", "paper", "scissors"]
-#     computer_choice = random.choice(game)
-#     print(f"\nYou choose {user_choice}, computer choose {computer_choice}:\n")
-
-#     if user_choice == computer_choice:
-#         print(f"Both players selected {user_choice}. It's a tie!")
-#     elif user_choice == "rock":
-#         if computer_choice == "scissors":
-#             print("Rock smashes scissors You won")
-#         else:
-#             print("Paper covers rock You lost.")
-#     elif user_choice == "paper":
-#         if computer_choice == "rock":
-#             print("Paper covers rock You won")
-#         else:
-#             print("Scissors cuts paper You lost.")
-#     elif user_choice == "scissors":
-#         if computer_choice == "paper":
-#             print("Scissors cuts paper You won.")
-#         else:
-#             print("Rock smashes scissors You lost.")
-    
-#     play_again = input("Play again? (y/n):\n>")
-#     if play_again.lower() != "y":
-#         print("Game Over")
-#         break
-
