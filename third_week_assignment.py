@@ -17,7 +17,10 @@ data = {
         "pin": "1214",
         "bal" : 15000
     },
+
+    
 }
+
 
 
 print("Welcome to the AstroBank App")
@@ -64,7 +67,7 @@ if choice == 'l':
             trans_account = input("Enter the account you wish to transfer to\n>")
             trans_account = data.get(trans_account)
             if trans_account == acc_num:
-                print("You cant transfer to your own account")
+                print("You can't transfer to your own account")
             else:
                 amount = int(input("How much do you want to transfer\n>"))
                 pin = input("Enter your pin\n>")
@@ -93,11 +96,13 @@ elif choice == 's':
             ]
 
     num = [1,2,3,4,5,6,7,8,9,0]
+    acc_num_list = 3
     acc_num_list = [str(random.choice(num)) for _ in range(10)]
     # print(acc_num_list)
     acc_num = "".join(acc_num_list)
 
     data[acc_num] = dict(details)
+        
 else: 
     print("Invalid input")
 
