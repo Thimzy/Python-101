@@ -69,55 +69,63 @@ import string
 #             print("Your password is valid")
 #             break
 
-# validate()
-
-
-# def passwd_check(passwd):
-#     isValid = True
-#     Special_Char=['$','@','#', '!']
-
+# def validate_password(password):
+#     isValid=True
     
-#     if len(passwd) < 8:
-#         print('the length of password should not be less than 6')
-#         isValid = False
-
-#     if not any(char.isdigit() for char in passwd):
-#         print('the password should have at least one number')
-#         isValid = False
-
-#     if not any(char.isupper() for char in passwd):
-#         print('the password should have at least one uppercase letter')
-#         isValid = False
-
-#     if not any(char.islower() for char in passwd):
-#         print('the password should have at least one lowercase letter')
+    
+#     if len(password) < 8:
+#         print("Password length should not be less than 8")
+#         isValid= False
+#     if not  any(char.isdigit() for char in password):
+#         print("Password should contain at least a number")
+#         isValid= False
+#     if not any(char.islower() for char in password):
+#         print("Password should contain at least a lowercase letter [a-z]")
+#         isValid= False
+#     if not any(char.isupper() for char in password):
+#         print("Password should contain at least a uppercase letter [A-Z]")
+#         isValid= False
+#     if not any(char in string.punctuation for char in password):
+#         print(f"Password should contain at least a special character {''.join(string.punctuation)}")
 #         isValid = False
         
-#     if not any(char in Special_Char for char in passwd):
-#         print('the password should have at least one of the special symbols')
-#         isValid = False
 #     if isValid:
 #         return "Strong Password"
 #     else:
 #         return "Not strong enough"
 
 
-# dat = passwd_check("Thimzy")
+# # print(string.punctuation)
+# def generate_password():
+#     a = []
+#     for _ in range(3):
+#         a.append(random.choice(string.ascii_lowercase))
+#         a.append(random.choice(string.ascii_uppercase))
+#         a.append(random.choice(string.digits))
+#         a.append(random.choice(string.punctuation))
+#     random.shuffle(a)
+#     return "".join(a)
+        
+    
+# print(generate_password())
+
+
+# dat = validate_password("Desmond")
 # print(dat)
 
-print('Hello, Welcome to password generator!')
+# print('Hello, Welcome to password generator!')
 
-#Input the lenght of password
-length = int(input('Enter the length of password:\n>'))
-#Define the data
-lower = string.ascii_lowercase
-upper = string.ascii_uppercase
-num = string.digits
-symbols = string.punctuation
-#Combine the data
-all = lower + upper + num + symbols
-#use random
-temp = random.sample(all,length)
-#Create the password
-password = "".join(temp)
-print(password)
+# #Input the lenght of password
+# length = int(input('Enter the length of password:\n>'))
+# #Define the data
+# lower = string.ascii_lowercase
+# upper = string.ascii_uppercase
+# num = string.digits
+# symbols = string.punctuation
+# #Combine the data
+# all = lower + upper + num + symbols
+# #use random
+# temp = random.sample(all,length)
+# #Create the password
+# password = "".join(temp)
+# print(password)
