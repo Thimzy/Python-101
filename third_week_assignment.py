@@ -102,6 +102,7 @@ elif choice == 's':
     acc_num = "".join(acc_num_list)
 
     data[acc_num] = dict(details)
+    
         
 else: 
     print("Invalid input")

@@ -1,41 +1,4 @@
-from datetime import datetime
 import random
-# import time   
-# num = range(10,50)
-# my_filter = filter(lambda x:x % 2!=0, num)
-# print(list(my_filter))
-
-# text = "Www.HackerRank.com"
-# print(text.swapcase())
-
-# a ="".join([i.upper() if i.islower() else i.lower() for i in text])
-# print(a)
-
-# print("Hello there!")
-# time.sleep(2.5)
-# print("Done!")
-# random.seed(1)
-# my_num = list(range(1,11))
-
-# random.shuffle(my_num) #shuffles the list
-# print(my_num)
-# data = random.sample(my_num, 3)#get a sample of k items from our overall population
-# print(data)
-
-# today = datetime.today().isoweekday()
-# today = datetime.today().weekday()
-# today = datetime.today().month()
-# today = datetime.today().year()
-# today = datetime.today().hour()
-
-# today = datetime.today()
-# print(datetime.strftime(today, "%A, %dth of January, %Y"))
-# print(datetime.strftime(today, "%A - %d - %b - %Y"))
-# print(datetime.strftime(today, "%a, %b %dth %Y"))
-# print(datetime.strftime(today, "Today is the %dth day of %b. %Y "))
-# print(datetime.strptime("21-Jan-22 8:10:40", "%d-%b-%y %H:%M %S"))
-
-# write a fuction that takes in an integer and return true or false if the integer is a prime number
 
 #...Bank App with Transaction data....#
 data = {}
