@@ -115,7 +115,7 @@ while True:
         bvn= input("Enter your BVN:\n>")
         def pin():
             pin = (input("Enter your PIN:\n>"))
-            if not any(char.isdigit() for char in pin):
+            if not all(char.isdigit() for char in pin):
                 print("Pin must be numeric")
             pin = (input("Enter another pin:\n>"))
         pin()
