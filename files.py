@@ -138,4 +138,4 @@ elif choice=="s":
 
 file = open("file.txt", "w")
 file.write(f"{data}")
-file.close()  
+file.close()
