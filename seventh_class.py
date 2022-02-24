@@ -142,20 +142,10 @@ while True:
             print("Invalid Login")
 
     elif choice == 's':
-        def name():
-            name = input("Enter your name:\n>")
-            if name is not []:
-                print("Name must be string")
-            name = input("Enter your name\n>")
-        name()
+        name = input("Enter your name:\n>")
         dob= input("Enter your date of birth:\n>")
         bvn= input("Enter your BVN:\n>")
-        def pin():
-            pin = (input("Enter your PIN:\n>"))
-            if not any(char.isdigit() for char in pin):
-                print("Pin must be numeric")
-            pin = (input("Enter another pin:\n>"))
-        pin()
+        pin = (input("Enter another pin:\n>"))
         details = [('name', name), 
                 ('dob', dob), 
                 ('bvn', bvn), 
