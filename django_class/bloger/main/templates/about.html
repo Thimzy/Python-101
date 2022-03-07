@@ -1,0 +1,230 @@
+{% extends 'base.html' %}
+
+{% block title %}
+About us
+{% endblock title %}
+
+{% block body %}
+<div id="page" class="columns">
+  <aside class="column padding">
+      <a href="#" id="logo">
+          blueBox
+      </a>
+
+      <div class="media">
+          <div class="media-left">
+              <figure class="image is-48x48">
+                  <img class="is-rounded" src="https://randomuser.me/api/portraits/men/67.jpg" alt="">
+              </figure>
+          </div>
+          <div class="media-content has-text-left">
+             <p class="title is-4">John Smith</p>
+             <p class="subtitle is-6">@Johnsmith</p>
+          </div>
+      </div>
+
+      <div class="menu">
+          <ul class="menu-list">
+              <li>
+                  <a class="is-flex is-justify-content-space-between is-active" href="#">
+                      <span>Dashboard</span> 
+                      <i class="fas fa-home"></i>
+                  </a>
+              </li>
+              <li>
+                  <a class="is-flex is-justify-content-space-between" href="#">
+                      <span>UI elements</span> 
+                      <i class="fas fa-users"></i>
+                  </a>
+              </li>
+              <li>
+                  <a class="is-flex is-justify-content-space-between" href="#">
+                      <span>Components</span> 
+                      <i class="fas fa-play-circle"></i>
+                  </a>
+              </li>
+              <li>
+                  <a class="is-flex is-justify-content-space-between" href="#">
+                      <span>Forms Stuff</span> 
+                      <i class="fab fa-wpforms"></i>
+                  </a>
+              </li>
+              <li>
+                  <a class="is-flex is-justify-content-space-between" href="#">
+                      <span>Data Table</span> 
+                      <i class="fas fa-table"></i>
+                  </a>
+              </li>
+              <li>
+                  <a class="is-flex is-justify-content-space-between" href="#">
+                      <span>Icons</span> 
+                      <i class="fas fa-crown"></i>
+                  </a>
+              </li>
+              <li>
+                  <a class="is-flex is-justify-content-space-between" href="#">
+                      <span>Sample Page</span> 
+                      <i class="fas fa-tv"></i>
+                  </a>
+              </li>
+              <li>
+                  <a class="is-flex is-justify-content-space-between" href="#">
+                      <span>Extra</span> 
+                      <i class="fas fa-bolt"></i>
+                  </a>
+              </li>
+              
+          </ul>
+          <button class="button is-primary blue-btn mt-5">Add Project</button>
+      </div>
+
+  </aside>
+  <main class="column is-three-quarters p-0">
+      <nav class="navbar navbar-menu is-spaced">
+          <div class="navbar-start">
+              <div class="navbar-item px-0">
+                  <p class="control has-icons-left">
+                    <input class="input info" type="text" placeholder="Search Project">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-search"></i>
+                    </span>
+                  </p>
+              </div>
+          </div>
+          <div class="navbar-end">
+              <div class="navbar-item image is-48x48">
+                  <img class="is-rounded" src="https://randomuser.me/api/portraits/men/67.jpg" alt="">
+              </div>
+              <div class="navbar-item has-dropdown">
+                  <a class="navbar-link">
+                    John Smith
+                  </a>
+                  <a class="navbar-item mx-5">
+                      <span class="icon">
+                        <i class="fas fa-envelope"></i>
+                      </span>
+                  </a>
+                  <a class="navbar-item mx-5">
+                      <span class="icon">
+                          <i class="fas fa-bell"></i>
+                      </span>
+                  </a>
+                  <a class="navbar-item mx-5">
+                      <span class="icon">
+                          <i class="fas fa-bars" aria-hidden="true"></i>
+                      </span>
+                  </a>
+          </div>  
+      </nav>
+      <section class="section">
+          <span class="icon-text">
+              <span class="icon has-text-primary">
+                <i class="fas fa-home"></i>
+              </span>
+              <span class="title is-4">Dashboard</span>
+            </span>
+          <div class="tile is-ancestor my-5">
+              <div class="tile is-parent">
+                <article class="tile is-child box px-4 purple-tile">
+                  <span class="icon is-large has-text-white">
+                      <i class="fa-solid fa-layer-group stock"></i>
+                  </span>
+                  <p class="subtitle has-text-white">Stock Total</p>
+                  <p class="title py-3 has-text-white">$150000</p>
+                  <p class="subtitle py-5 has-text-white">Increased by 60%</p>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child box px-4 blue-tile">
+                  <span class="icon is-large has-text-white">
+                      <i class="fas fa-coins stock"></i>
+                  </span>
+                  <p class="subtitle has-text-white">Total Profit</p>
+                  <p class="title py-3 has-text-white">$25000</p>
+                  <p class="subtitle py-5 has-text-white">Increased by 30%</p>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child box px-4 pink-tile">
+                  <span class="icon is-large has-text-white">
+                      <i class="fas fa-flag stock"></i>
+                  </span>
+                  <p class="subtitle has-text-white">Unique Visitors</p>
+                  <p class="title py-3 has-text-white">$250000</p>
+                  <p class="subtitle py-5 has-text-white">Increased by 80%</p>
+                </article>
+              </div>
+            </div>
+        </section>
+
+        <section class="section mx-6 has-background-white">
+          <table class="table is-fullwidth">
+              <thead>
+                  <p class="title is-4">Standard Table Design</p>
+                  <tr>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>User Type</th>
+                      <th>Joined</th>
+                      <th>Status</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Mike Bahnd</td>
+                      <td>mband@gmail.com</td>
+                      <td>Admin</td>
+                      <td>24th April 2018</td>
+                      <td>
+                        <button class="button is-info is-small">Pending</button>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>Andrew Straus</td>
+                    <td>info@yourmail.com</td>
+                    <td>Editor</td>
+                    <td>25 June 2019</td>
+                    <td>
+                        <button class="button is-link is-small">Approved</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Andrew Straus</td>
+                    <td>info@yourmail.com</td>
+                    <td>Editor</td>
+                    <td>25 June 2019</td>
+                    <td>
+                      <button class="button is-link is-small">Approved</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Andrew Straus</td>
+                    <td>info@yourmail.com</td>
+                    <td>Editor</td>
+                    <td>25 June 2019</td>
+                    <td>
+                        <button class="button is-link is-small">Approved</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Andrew Straus</td>
+                    <td>info@yourmail.com</td>
+                    <td>Editor</td>
+                    <td>25 June 2019</td>
+                    <td>
+                        <button class="button is-danger is-small">Rejected</button>
+                    </td>
+                </tr>
+              </tbody>
+          </table>
+
+
+        </section>
+        
+      
+  </main>
+</div>
+
+<!-- script below -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/all.min.js" integrity="sha512-cyAbuGborsD25bhT/uz++wPqrh5cqPh1ULJz4NSpN9ktWcA6Hnh9g+CWKeNx2R0fgQt+ybRXdabSBgYXkQTTmA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock body %} 

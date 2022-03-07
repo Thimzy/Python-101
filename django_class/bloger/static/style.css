@@ -1,0 +1,68 @@
+  @media screen and (max-width: 969px) {
+     #page {
+         min-height: 100vh;
+     }
+ }
+ 
+ aside {
+     background-color: #fff;
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+ }
+ 
+ aside.padding {
+     padding: 10px 30px;
+ }
+ 
+ aside #logo {
+     font-weight: bold;
+     color: #3f3fdf;
+     font-size: 2em;
+     display: inline-block;
+ }
+ 
+ aside ul {
+     text-align: left;
+ }
+ 
+ aside ul li {
+     padding: 5px 0px;
+ }
+ 
+ aside .menu-list a.is-active {
+     background-color: transparent;
+     color: dodgerblue;
+ }
+ 
+ .blue-btn {
+     background-image: linear-gradient(to bottom, dodgerblue, #3f72df);
+     color: #fff;
+     width: 100%;
+ }
+ 
+ main {
+     background-color: #F6F6F6;
+ }
+ 
+ .purple-tile {
+     background-image: linear-gradient(45deg, #C390FA, #B16EF4);
+ }
+ 
+ .blue-tile {
+     background-image: linear-gradient(to right, #69A3E3, #7F82EC);
+ }
+ 
+ .pink-tile {
+     background-image: linear-gradient(to right, #F5C5A5, #FF9290);
+ }
+ 
+ .info {
+     border: none;
+     background-color: transparent;
+     outline: none;
+ }
+ 
+ .stock {
+     font-size: 26px;
+ }
