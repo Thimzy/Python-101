@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+About Us
+{% endblock title %}
+
+{% block body %}
+<p>My name is {{name | capfirst}}</p>
+
+<div class="container overflow-hidden">
+    <div class="row gy-5">
+      <div class="col-6">
+        <div class="p-3 border bg-light">Custom column padding</div>
+      </div>
+      <div class="col-6">
+        <div class="p-3 border bg-light">Custom column padding</div>
+      </div>
+      <div class="col-6">
+        <div class="p-3 border bg-light">Custom column padding</div>
+      </div>
+      <div class="col-6">
+        <div class="p-3 border bg-light">Custom column padding</div>
+      </div>
+    </div>
+  </div>
+
+<p>{% load static %}<img src={% static 'images/picss.jpg' %}></p>
+
+{% endblock body %}
