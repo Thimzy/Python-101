@@ -1,7 +1,12 @@
 from django.urls import path
 from . import views
 
+app_name = 'main'
+
 urlpatterns = [
-    path("headers/", views.home_page, name="homepage"),
-    path("abouts/", views.about_page, name="aboutpage")
+ # post views
+    path('', views.post_list, name='post_list'),
+    path('posts/<int:year>/<int:month>/<int:day>/<slug:slug>/',views.post_detail, name='post_detail'),
+    path('<int:post_id>/share/',
+ views.post_share, name='post_share')
 ]
