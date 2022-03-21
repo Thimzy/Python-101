@@ -16,5 +16,38 @@
         Share this post
         </a>
     </p>
-       
+
+    <hr>
+    {% for comment in comment %}
+        <article class="media">
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <strong>{{ comment.name }}</strong><small>{{ comment.date_added }}</small>
+                        <br>
+                        {{ comment.body }}
+
+                    </p>
+                </div>
+            </div>
+        </article>
+    {% empty %}
+        <div class="notification">
+            <p>No comments yet!</p>
+        </div>
+    {% endfor %}
+    
+    
+    <hr>
+
+    <h2 class="subtitle">Add comment<h2/>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="field">
+                <div class="control">
+                    <button class="button is-success">Submit</button>
+                </div>    
+            <div/>
+        </form>
 {% endblock content %}

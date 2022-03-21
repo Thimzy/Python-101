@@ -1,7 +1,6 @@
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
-from django.contrib.auth.models import User
 from .managers import PublishedManager
 
 class Post(models.Model):
@@ -12,12 +11,12 @@ class Post(models.Model):
     
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250, unique_for_date='publish')
-    author = models.ForeignKey(User, on_delete=models.CASCADE,related_name='blog_posts')
+    author = models.CharField(max_length=250)
     body = models.TextField()
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    status = models.CharField(max_length=10, choices=STATUS_CHOICES,default='draft')
+    status = models.CharField(max_length=10,default='published')
     
     
     objects = models.Manager() # The default manager.
@@ -35,3 +34,17 @@ class Post(models.Model):
                             self.publish.month,
                             self.publish.day, 
                             self.slug])
+
+class Comment(models.Model):
+    post = models. ForeignKey(Post, related_name='comments', on_delete=models.CASCADE)
+    name = models.CharField(max_length=250)
+    email = models. EmailField()
+    body = models. TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ('date_added',)
+
+
+    def __str__(self):
+        return f'Comment by {self.name} on {self.post}'

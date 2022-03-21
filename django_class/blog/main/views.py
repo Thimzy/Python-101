@@ -1,8 +1,10 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import  redirect, render, get_object_or_404
 from .models import Post
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger 
 from .forms import EmailPostForm
 from django.core.mail import send_mail
+from .models import Post, Comment
+from .forms import EmailPostForm, CommentForm
 
 
 def post_list(request):
@@ -36,7 +38,34 @@ def post_detail(request, year, month, day, slug):
                             publish__year=year,
                             publish__month=month,
                             publish__day=day)
-    return render(request, "post/detail.html", {"post":post})
+     # List of active comments for this post
+    comments = post.comments
+    new_comment = None
+    if request.method == 'POST':
+    # A comment was posted
+       form = CommentForm(data=request.POST)
+       if form.is_valid():
+    # Create Comment object but don't save to database yet
+         new_comment = form.save(commit=False)
+    # Assign the current post to the comment
+         new_comment.post = post
+    # Save the comment to the database
+         new_comment.save()
+         return redirect("post_detail")
+
+
+    else:
+        form = CommentForm()
+        return render(request,
+                    'post/detail.html',
+                    {'post': post,
+                    'comments': comments,
+                    'new_comment': new_comment,
+                    'form': form})
+
+    return render(request, "post/detail.html", {"post":post,'form':form,})
+
+    
     
 
 def post_share(request, post_id):
@@ -64,3 +93,18 @@ def post_share(request, post_id):
                   {'post': post,
                    'form': form,
                    'sent':sent})
+
+def post_add(request):
+    if request.method == "POST":
+       
+        post=Post()
+        post.title=request.POST.get('title')
+        post.body= request.POST.get('body')
+        post.author=request.POST.get('author')
+        post.slug = post.title.lower().replace(" ", "-")
+        post.save()
+                
+        return redirect("main:post_list")  
+
+
+    return render(request,'post/add.html')

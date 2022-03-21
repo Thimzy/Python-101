@@ -1,0 +1,21 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Add new a post{% endblock %}
+{% block content %}
+<form method = "POST">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="title_" class="form-label">Title:</label>
+      <input type="text" name="title" class="form-control" id="title_">
+    </div>
+    <div class="mb-3">
+      <label for="author" class="form-label">Author:</label>
+      <input type="text" name="author" class="form-control" id="author_">
+    </div>
+    <div class="mb-3">
+      <label for="body" class="form-label">Body:</label>
+      <input type="textarea" name="body" class="form-control" id="body_">
+    </div>
+    <input type="submit" class="btn btn-primary" value="Submit">
+<form/>
+{% endblock content %}
